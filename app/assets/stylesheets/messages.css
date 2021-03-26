@@ -30,9 +30,27 @@
 .side-header{
   height: 100px;
   padding: 0px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-.side-chatroom{
+.side-user-name{
+  color: #fafafa;
+  font-size: 16px;
+}
+.side-create-room{
+  color: #fafafa;
+  font-size: 10px;
+  background-color: lightblue;
+  border: 1px solid lightblue;
+  padding: 9px;
+}
+.side-chatrooms{
   background-color: #2f3e51;
   height: calc(100vh - 100px);
   padding: 0px 20px;
+}
+.side-chatroom{
+  padding: 20px 0px 40px 0px;
+  color: #fafafa;
 }
