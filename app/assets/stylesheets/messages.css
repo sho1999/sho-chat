@@ -1,0 +1,38 @@
+/* main */
+.wrapper{
+  display: flex;
+}
+.main{
+  background-color: #fff;
+  width: calc(100vw - 300px);
+  height: 100vh;
+}
+.main-header{
+  height: 100px;
+  padding: 0px 40px;
+}
+.main-message{
+  background-color: #d1d0d0;
+  height: calc(100vh - 100px - 90px); /* 190pxとしたら自分以外に見る人が何を表しているのかわからないのでこれにしておく */
+  padding: 46px 40px 0px;
+}
+.main-form{
+  height: 90px;
+  background-color: #b4b4b4;
+  padding: 20px 40px;
+}
+/* side */
+.side{
+  background-color: #253141;
+  width: 300px;
+  height: 100vh;
+}
+.side-header{
+  height: 100px;
+  padding: 0px 20px;
+}
+.side-chatroom{
+  background-color: #2f3e51;
+  height: calc(100vh - 100px);
+  padding: 0px 20px;
+}
