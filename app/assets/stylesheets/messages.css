@@ -45,19 +45,51 @@
 .main-message-name{
   margin-right: 10px;
 }
-.main-message-date{
-  
-}
-
-
-
-
-
 .main-form{
   height: 90px;
   background-color: #b4b4b4;
   padding: 20px 40px;
+  display: flex;
 }
+.main-form-input{
+  width: 100%;
+  background-color: white;
+  margin-right: 10px;
+  display: flex;
+}
+.form-message{
+  color:#ddd;
+  border: none;
+  height: 50px;
+  padding-left: 10px;
+  width: 100%;
+}
+.form-submit{
+  background-color: lightblue;
+  border: none;
+  font-size: 16px;
+  color: white;
+  height: 50px;
+  padding: 0px 20px;
+}
+.form-image {
+  font-size: 12px;
+  background-color: lightblue;
+  color: white;
+  padding: 12px;
+  width: 60px;
+  margin: 5px 10px;
+  text-align: center;
+}
+.form-image:hover {
+  background-color: rgb(79, 186, 221);
+  transition: 0.5s;
+}
+
+.hidden {
+  display: none;
+}
+
 /* side */
 .side{
   background-color: #253141;
