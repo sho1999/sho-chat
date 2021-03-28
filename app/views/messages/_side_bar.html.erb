@@ -1,5 +1,7 @@
 <div class="side-header">
-  <div class="side-user-name">Tom</div>
+  <div class="side-user-name">
+    <%= link_to current_user.name, edit_user_path(current_user), class: "side-user-name"%>
+  </div>
   <div class="side-create-room">room作成</div>
 </div>
 <div class="side-chatrooms">
