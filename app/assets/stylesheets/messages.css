@@ -106,6 +106,7 @@
 .side-user-name{
   color: #fafafa;
   font-size: 16px;
+  text-decoration: none;
 }
 .side-create-room{
   color: #fafafa;
