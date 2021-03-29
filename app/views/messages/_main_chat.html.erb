@@ -5,74 +5,7 @@
   </div>
 </div>
 <div class="main-messages">
-  <div class="main-message">
-    <div class="main-message">
-      <div class="main-message-name-date">
-        <div class="main-message-name">
-        Sho
-        </div>
-        <div class="main-message-date">
-          2021/03/31(Wed)13:00:00
-        </div>
-      </div>
-      <p>goodmorning</p>
-    </div>
-    <div class="main-message">
-      <div class="main-message-name-date">
-        <div class="main-message-name">
-        吉田
-        </div>
-        <div class="main-message-date">
-          2021/03/31(Wed)13:20:00
-        </div>
-      </div>
-      <p>やあ</p>
-    </div>
-    <div class="main-message">
-      <div class="main-message-name-date">
-        <div class="main-message-name">
-        Sho
-        </div>
-        <div class="main-message-date">
-          2021/03/31(Wed)13:00:00
-        </div>
-      </div>
-      <p>goodmorning</p>
-    </div>
-    <div class="main-message">
-      <div class="main-message-name-date">
-        <div class="main-message-name">
-        吉田
-        </div>
-        <div class="main-message-date">
-          2021/03/31(Wed)13:20:00
-        </div>
-      </div>
-      <p>やあ</p>
-    </div>
-    <div class="main-message">
-      <div class="main-message-name-date">
-        <div class="main-message-name">
-        Sho
-        </div>
-        <div class="main-message-date">
-          2021/03/31(Wed)13:00:00
-        </div>
-      </div>
-      <p>goodmorning</p>
-    </div>
-    <div class="main-message">
-      <div class="main-message-name-date">
-        <div class="main-message-name">
-        吉田
-        </div>
-        <div class="main-message-date">
-          2021/03/31(Wed)13:20:00
-        </div>
-      </div>
-      <p>やあ</p>
-    </div>
-  </div>
+  <%= render partial: 'message', collection: @messages %>
 </div>
 <%= form_with model: [@room, @message], class: 'main-form', local: true do |f| %>
   <div class="main-form-input">
