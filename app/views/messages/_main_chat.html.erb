@@ -3,7 +3,7 @@
     <%= @room.name %>
   </div>
   <div class="main-delete-room">
-    <a href="#">チャット終了</a>
+    <%= link_to "チャットを終了する", room_path(@room), method: :delete %> <!-- 削除するチャットルームを区別するために、定義している@roomを引数-->
   </div>
 </div>
 <div class="main-messages">
