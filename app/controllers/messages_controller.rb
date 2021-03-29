@@ -18,7 +18,7 @@ class MessagesController < ApplicationController
 
   private
   def message_params
-    params.require(:message).permit(:content).merge(user_id: current_user.id) #merge(user_id: current_user.id)←これで誰がメッセージを送信したかわかる
+    params.require(:message).permit(:content, :image).merge(user_id: current_user.id) #merge(user_id: current_user.id)←これで誰がメッセージを送信したかわかる
   end
 
 end
