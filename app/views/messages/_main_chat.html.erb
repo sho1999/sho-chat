@@ -1,86 +1,21 @@
 <div class="main-header">
-  <div class="main-chatname">夢への片道切符</div>
+  <div class="main-chatname">
+    <%= @room.name %>
+  </div>
   <div class="main-delete-room">
-    <a href="#">チャット終了</a>
+    <%= link_to "チャットを終了する", room_path(@room), method: :delete %> <!-- 削除するチャットルームを区別するために、定義している@roomを引数-->
   </div>
 </div>
 <div class="main-messages">
-  <div class="main-message">
-    <div class="main-message">
-      <div class="main-message-name-date">
-        <div class="main-message-name">
-        Sho
-        </div>
-        <div class="main-message-date">
-          2021/03/31(Wed)13:00:00
-        </div>
-      </div>
-      <p>goodmorning</p>
-    </div>
-    <div class="main-message">
-      <div class="main-message-name-date">
-        <div class="main-message-name">
-        吉田
-        </div>
-        <div class="main-message-date">
-          2021/03/31(Wed)13:20:00
-        </div>
-      </div>
-      <p>やあ</p>
-    </div>
-    <div class="main-message">
-      <div class="main-message-name-date">
-        <div class="main-message-name">
-        Sho
-        </div>
-        <div class="main-message-date">
-          2021/03/31(Wed)13:00:00
-        </div>
-      </div>
-      <p>goodmorning</p>
-    </div>
-    <div class="main-message">
-      <div class="main-message-name-date">
-        <div class="main-message-name">
-        吉田
-        </div>
-        <div class="main-message-date">
-          2021/03/31(Wed)13:20:00
-        </div>
-      </div>
-      <p>やあ</p>
-    </div>
-    <div class="main-message">
-      <div class="main-message-name-date">
-        <div class="main-message-name">
-        Sho
-        </div>
-        <div class="main-message-date">
-          2021/03/31(Wed)13:00:00
-        </div>
-      </div>
-      <p>goodmorning</p>
-    </div>
-    <div class="main-message">
-      <div class="main-message-name-date">
-        <div class="main-message-name">
-        吉田
-        </div>
-        <div class="main-message-date">
-          2021/03/31(Wed)13:20:00
-        </div>
-      </div>
-      <p>やあ</p>
-    </div>
-  </div>
+  <%= render partial: 'message', collection: @messages %>
 </div>
-<div class="main-form">
+<%= form_with model: [@room, @message], class: 'main-form', local: true do |f| %>
   <div class="main-form-input">
-    <input class="form-message" placeholder="type a message">
+    <%= f.text_field :content, class: 'form-message', placeholder: 'type a message' %>
     <label class="form-image">
       <span class="image-file">画像</span>
-      <input type="file" class="hidden">
+      <%= f.file_field :image, class: 'hidden' %>
     </label>
   </div>
-  <input class="form-submit" type="submit" value="送信">
-</div>
+  <%= f.submit '送信', class: 'form-submit' %>
+<% end %>
